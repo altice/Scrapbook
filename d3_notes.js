@@ -1,0 +1,5 @@
+g.append('g')
+	.attr('transform','translate(12,0')
+	.attr('class','axis')
+	.call(d3.axisLeft(y)
+			.ticks(20))
