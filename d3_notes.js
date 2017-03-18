@@ -72,4 +72,22 @@ panel.selectAll('rect.bar')
 	.attr('height', function(d) { return scaleX(d.key);})
 	.attr('y', function(d){ return -scaleY(d.value)})
 
+var line = d3.line()
+			.x(function(d){return scaleX(d.date);})
+			.y(function(d){return scaleY(d.close);})
+
+svg.selectAll('dot')
+.style(function(d){
+	if(d.close <=400) {return "red"}
+		else( return "black")
+
+})
+
+d3.selectAll('p')
+.transition()
+.style('color','green')
+.duration(1000000)
+
+
+
 
